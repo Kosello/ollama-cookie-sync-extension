@@ -1,9 +1,12 @@
 # Ollama Cookie Sync (optional)
 
 > **⚠️ OPTIONAL — you do not need this extension.** It is a convenience add-on
-> for the [Hermes ollama-usage-monitor plugin](https://github.com/Kosello/ollama-usage-monitor).
+> for the [Hermes ollama-usage-monitor plugin](https://github.com/Kosello/hermes-ollama-usage-monitor).
 > The plugin works fully without it. This extension only removes the rare
 > manual re-paste of your Ollama Cloud session cookie (~every 2 months).
+
+> **⚠️ WORK IN PROGRESS — expect bugs.** This extension is under active
+> development and has not been extensively tested across browser versions.
 
 Chromium extension (Brave, Chrome, Arc — all Chromium-based) that watches the
 Ollama Cloud `__Secure-session` cookie and pushes it to a local sync listener,
