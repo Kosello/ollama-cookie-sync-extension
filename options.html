@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ollama Cookie Sync — Settings</title>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; max-width: 480px; margin: 24px auto; padding: 0 16px; font-size: 14px; }
+    h1 { font-size: 18px; }
+    label { display: block; margin: 12px 0 4px; font-weight: 600; }
+    input[type=text], input[type=password] { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+    .hint { color: #5f6368; font-size: 12px; margin-top: 4px; }
+    .toggle { display: flex; align-items: center; gap: 8px; }
+    button { margin-top: 16px; padding: 8px 16px; border: 0; border-radius: 6px; background: #1a73e8; color: #fff; cursor: pointer; }
+    #msg { margin-top: 10px; color: #137333; font-weight: 600; }
+    code { background: #f1f3f4; padding: 2px 5px; border-radius: 4px; }
+    .optional { display: inline-block; background: #fef7e0; color: #7a5c00; border-radius: 10px; padding: 1px 8px; font-size: 11px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Ollama Cookie Sync <span class="optional">OPTIONAL</span></h1>
+  <p class="hint">This extension is optional. The Hermes ollama-usage-monitor plugin works fully without it — it only auto-refreshes your cookie so you don't have to re-paste it manually (~every 2 months).</p>
+
+  <label class="toggle"><input type="checkbox" id="enabled"> Enabled</label>
+
+  <label for="listenerUrl">Sync listener URL</label>
+  <input type="text" id="listenerUrl" placeholder="http://127.0.0.1:8765">
+  <div class="hint">The local listener that writes the cookie into ~/.hermes/ollama_cookie.txt.</div>
+
+  <label for="token">Pairing token</label>
+  <input type="password" id="token" placeholder="paste the token printed by the listener">
+  <div class="hint">Printed once when you start the listener, or in <code>~/.hermes/ollama-cookie-sync-token.txt</code>.</div>
+
+  <button id="save">Save</button>
+  <div id="msg"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
